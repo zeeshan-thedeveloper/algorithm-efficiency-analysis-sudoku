@@ -679,7 +679,7 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="5515" y="270" />
-              <mxPoint x="6370" y="270" />
+              <mxPoint x="6920" y="270" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -713,8 +713,37 @@
         <mxCell id="S4ZxqDm5p7QgWU9oLSgd-334" value="In first iteration we will traverse the row 0 and will look for empty cell" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;" vertex="1" parent="1">
           <mxGeometry x="5020" y="400" width="140" height="90" as="geometry" />
         </mxCell>
+        <mxCell id="S4ZxqDm5p7QgWU9oLSgd-343" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="S4ZxqDm5p7QgWU9oLSgd-337" target="S4ZxqDm5p7QgWU9oLSgd-341">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6870" y="460" />
+              <mxPoint x="6870" y="533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S4ZxqDm5p7QgWU9oLSgd-344" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="S4ZxqDm5p7QgWU9oLSgd-337" target="S4ZxqDm5p7QgWU9oLSgd-342">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="S4ZxqDm5p7QgWU9oLSgd-337" value="we will get this cell (0,2)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;" vertex="1" parent="1">
-          <mxGeometry x="6300" y="400" width="140" height="90" as="geometry" />
+          <mxGeometry x="6850" y="395" width="140" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="S4ZxqDm5p7QgWU9oLSgd-347" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="S4ZxqDm5p7QgWU9oLSgd-341" target="S4ZxqDm5p7QgWU9oLSgd-345">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S4ZxqDm5p7QgWU9oLSgd-341" value="remove the picked number from same row" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="6890" y="500" width="140" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="S4ZxqDm5p7QgWU9oLSgd-348" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="S4ZxqDm5p7QgWU9oLSgd-342" target="S4ZxqDm5p7QgWU9oLSgd-346">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S4ZxqDm5p7QgWU9oLSgd-342" value="remove the picked number from same col" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="6890" y="570" width="140" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="S4ZxqDm5p7QgWU9oLSgd-345" value="row contains other domains" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="7060" y="500" width="140" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="S4ZxqDm5p7QgWU9oLSgd-346" value="col contains other domains" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="7060" y="570" width="140" height="65" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
