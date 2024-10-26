@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.10">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.0" pages="2">
   <diagram name="Page-1" id="VqfginliFecTR1JRzVdc">
     <mxGraphModel dx="1909" dy="2118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1188,6 +1188,155 @@
         </mxCell>
         <mxCell id="S4ZxqDm5p7QgWU9oLSgd-527" value="4" style="html=1;fillColor=#CCCCCC;strokeColor=none;shadow=0;fontSize=14;fontColor=#FFFFFF;align=center;fontStyle=1;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="9060" y="757.5" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="RkShmx7TEUpfBRVOKmPa" name="backtracking-with-contraint-propagation-forward-looking">
+    <mxGraphModel dx="1876" dy="980" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Back-tracking with constraints propagation&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="239" y="12" width="350" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QQOcChVqIPkQUWGY0Kh2-2" target="QQOcChVqIPkQUWGY0Kh2-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-2" value="Process start by calling a recursive function (let&#39;s assume it&#39;s called solver)&amp;nbsp;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="22" y="85" width="261" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-9" value="Solver (this is recursive function)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="298" y="219" width="283" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-26" value="empty_value = find_empty_space(grid)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-9">
+          <mxGeometry x="19" y="43" width="239" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-27" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;# check if empty_value is true or false, if it&#39;s false (means there is no empty space is left in grid and puzzel is solved) : we will return value to end the function call. But if there is any empty value then we will pick values from it&#39;s domains and will use check_vailidity method to see if the value is respecting the constraints&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-9">
+          <mxGeometry x="21.5" y="87" width="240" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-28" value="# if the selected value from domain is respecting the constraints then place it in the found empty space. And then call this solver again with update grid." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-9">
+          <mxGeometry x="21.5" y="222" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-29" value="# If no value is satisficed from domain then we will do back track to try another combination&amp;nbsp;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-9">
+          <mxGeometry x="27" y="309" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-30" value="# we will do back-track in another condition which is if no empty space is found" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-9">
+          <mxGeometry x="27" y="379" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QQOcChVqIPkQUWGY0Kh2-11" target="QQOcChVqIPkQUWGY0Kh2-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-11" value="We will define a grid/board globally so that every copy of this solver function writes on it : let&#39;s say it&#39;s name is :&amp;nbsp;&amp;nbsp;sudoku_grid" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="560" y="82" width="244" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-16" value="Empty space finder (find_empty_space)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="219" width="259" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-20" value="This funtion will look for empty space into given grid/board" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-16">
+          <mxGeometry x="25.5" y="32" width="149" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-21" value="Constraints Checker (check_vailidity)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="17" y="364" width="262" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-22" value="This function will look if the defined constraints are holding for new chosen value" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-21">
+          <mxGeometry x="43" y="33" width="149" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-31" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-180;" vertex="1" parent="1">
+          <mxGeometry x="572" y="207" width="50" height="481" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-32" value="This is recursive function so will call it it self multiple time until we have solved whole puzzle by filling all empty spaces" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="615" y="219" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-33" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Solver (this is recursive function)&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=default;swimlaneFillColor=#00FFFF;" vertex="1" parent="1">
+          <mxGeometry x="607.5" y="286" width="205" height="524" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-34" value="empty_value = find_empty_space(grid)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-33">
+          <mxGeometry x="19" y="43" width="158" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-35" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;# check if empty_value is true or false, if it&#39;s false (means there is no empty space is left in grid and puzzel is solved) : we will return value to end the function call. But if there is any empty value then we will pick values from it&#39;s domains and will use check_vailidity method to see if the value is respecting the constraints&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-33">
+          <mxGeometry x="21.5" y="87" width="155.5" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-36" value="# if the selected value from domain is respecting the constraints then place it in the found empty space. And then call this solver again with update grid." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-33">
+          <mxGeometry x="21.5" y="222" width="161.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-37" value="# If no value is satisficed from domain then we will do back track to try another combination&amp;nbsp;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-33">
+          <mxGeometry x="24" y="318" width="162" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-38" value="# we will do back-track in another condition which is if no empty space is found" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-33">
+          <mxGeometry x="27" y="379" width="150" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-45" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Solver (this is recursive function)&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=default;swimlaneFillColor=#00CC00;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-33">
+          <mxGeometry x="8.5" y="33" width="196" height="491" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-46" value="empty_value = find_empty_space(grid)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-45">
+          <mxGeometry x="19" y="43" width="158" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-47" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;# check if empty_value is true or false, if it&#39;s false (means there is no empty space is left in grid and puzzel is solved) : we will return value to end the function call. But if there is any empty value then we will pick values from it&#39;s domains and will use check_vailidity method to see if the value is respecting the constraints&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-45">
+          <mxGeometry x="21.5" y="87" width="155.5" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-48" value="# if the selected value from domain is respecting the constraints then place it in the found empty space. And then call this solver again with update grid." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-45">
+          <mxGeometry x="21.5" y="222" width="161.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-49" value="# If no value is satisficed from domain then we will do back track to try another combination&amp;nbsp;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-45">
+          <mxGeometry x="24" y="318" width="162" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-50" value="# we will do back-track in another condition which is if no empty space is found" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-45">
+          <mxGeometry x="27" y="379" width="150" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-51" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Solver (this is recursive function)&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=default;swimlaneFillColor=#FFCCFF;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-45">
+          <mxGeometry x="8" y="40" width="188" height="451" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-52" value="empty_value = find_empty_space(grid)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-51">
+          <mxGeometry x="19" y="43" width="158" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-53" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;# check if empty_value is true or false, if it&#39;s false (means there is no empty space is left in grid and puzzel is solved) : we will return value to end the function call. But if there is any empty value then we will pick values from it&#39;s domains and will use check_vailidity method to see if the value is respecting the constraints&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-51">
+          <mxGeometry x="21.5" y="87" width="155.5" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-54" value="# if the selected value from domain is respecting the constraints then place it in the found empty space. And then call this solver again with update grid." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-51">
+          <mxGeometry x="21.5" y="222" width="161.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-55" value="# If no value is satisficed from domain then we will do back track to try another combination&amp;nbsp;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-51">
+          <mxGeometry x="24" y="318" width="162" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-56" value="# we will do back-track in another condition which is if no empty space is found" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-51">
+          <mxGeometry x="27" y="379" width="150" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-57" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Solver (this is recursive function)&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=default;swimlaneFillColor=#00CC00;" vertex="1" parent="1">
+          <mxGeometry x="629" y="406" width="192" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-58" value="empty_value = find_empty_space(grid)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-57">
+          <mxGeometry x="19" y="43" width="158" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-59" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;# check if empty_value is true or false, if it&#39;s false (means there is no empty space is left in grid and puzzel is solved) : we will return value to end the function call. But if there is any empty value then we will pick values from it&#39;s domains and will use check_vailidity method to see if the value is respecting the constraints&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-57">
+          <mxGeometry x="21.5" y="87" width="155.5" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-60" value="# if the selected value from domain is respecting the constraints then place it in the found empty space. And then call this solver again with update grid." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-57">
+          <mxGeometry x="21.5" y="222" width="161.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-61" value="# If no value is satisficed from domain then we will do back track to try another combination&amp;nbsp;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-57">
+          <mxGeometry x="24" y="318" width="162" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-62" value="# we will do back-track in another condition which is if no empty space is found" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-57">
+          <mxGeometry x="27" y="379" width="150" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-63" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Solver (this is recursive function)&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=default;swimlaneFillColor=#CCFFE6;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-57">
+          <mxGeometry x="4" y="49" width="188" height="451" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-64" value="empty_value = find_empty_space(grid)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-63">
+          <mxGeometry x="19" y="43" width="158" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-65" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;# check if empty_value is true or false, if it&#39;s false (means there is no empty space is left in grid and puzzel is solved) : we will return value to end the function call. But if there is any empty value then we will pick values from it&#39;s domains and will use check_vailidity method to see if the value is respecting the constraints&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-63">
+          <mxGeometry x="21.5" y="87" width="155.5" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-66" value="# if the selected value from domain is respecting the constraints then place it in the found empty space. And then call this solver again with update grid." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-63">
+          <mxGeometry x="21.5" y="222" width="161.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-67" value="# If no value is satisficed from domain then we will do back track to try another combination&amp;nbsp;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-63">
+          <mxGeometry x="24" y="318" width="162" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-68" value="# we will do back-track in another condition which is if no empty space is found" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-63">
+          <mxGeometry x="27" y="379" width="150" height="31" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
