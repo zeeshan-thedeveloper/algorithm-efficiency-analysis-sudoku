@@ -17,4 +17,4 @@ class TimeTracker:
         """Return the elapsed time in milliseconds."""
         if self.start_time is None or self.end_time is None:
             return 0
-        return (self.end_time - self.start_time) * 1000  # Convert to milliseconds
+        return (self.end_time - self.start_time)   # Convert to milliseconds
