@@ -1193,7 +1193,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="RkShmx7TEUpfBRVOKmPa" name="backtracking-with-contraint-propagation-forward-looking">
-    <mxGraphModel dx="1876" dy="980" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1290" dy="674" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1535,6 +1535,83 @@
               <mxPoint x="1124" y="556" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-131" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Simulate annealing&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1882" width="350" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-132" value="In this simulated annealing we deal with some variables for example&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;initial_temprature, cooling_rate,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;best_score and iterations&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1686" y="52" width="261" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-133" value="&lt;div&gt;List of utility methods used&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1686" y="132" width="172" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-134" value="Random number assigner (randomize_on_zeroes)" style="swimlane;whiteSpace=wrap;html=1;startSize=34;" vertex="1" parent="1">
+          <mxGeometry x="1686" y="172" width="251" height="86" as="geometry">
+            <mxRectangle x="1686" y="271" width="303" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-135" value="This function will assign random numbers to empty spaces" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-134">
+          <mxGeometry x="5" y="40" width="233" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-136" value="Score calculator (score_board)" style="swimlane;whiteSpace=wrap;html=1;startSize=34;" vertex="1" parent="1">
+          <mxGeometry x="1686" y="280" width="251" height="211" as="geometry">
+            <mxRectangle x="1686" y="271" width="303" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-137" value="This function will assign -1 to those vailid entries and will do sum (this will show how close we are getting to best solution). Note if the score is -162 then it means we have&amp;nbsp;&lt;div&gt;&lt;li&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;katex-html&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;mord&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;×&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;81&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; unique elements for rows.&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mrow&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;81&lt;/mn&gt;&lt;/mrow&gt;9 \times 9 = 81&lt;/math&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;katex-html&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;×&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;81&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; unique elements for columns.&lt;/li&gt;&lt;li&gt;Total: &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mrow&gt;&lt;mn&gt;81&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;81&lt;/mn&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;162&lt;/mn&gt;&lt;/mrow&gt;81 + 81 = 162&lt;/math&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;katex-html&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;81&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;81&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;162&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;.&lt;/li&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-136">
+          <mxGeometry x="5" y="40" width="233" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-138" value="Neighbor candidate creator (make_candidate_data)" style="swimlane;whiteSpace=wrap;html=1;startSize=34;" vertex="1" parent="1">
+          <mxGeometry x="1683" y="515" width="251" height="86" as="geometry">
+            <mxRectangle x="1686" y="271" width="303" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-139" value="This function will first create copy of existing grid and then randomly swapping squares&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-138">
+          <mxGeometry x="5" y="40" width="233" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-143" value="Solver function" style="swimlane;whiteSpace=wrap;html=1;startSize=34;" vertex="1" parent="1">
+          <mxGeometry x="1968" y="52" width="491" height="474" as="geometry">
+            <mxRectangle x="1686" y="271" width="303" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-144" value="# this will first&amp;nbsp; randomly assign the values to empty spaces and then calculate the score using socre_board of default given grid and then assign it to best score and also store in current score" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-143">
+          <mxGeometry x="20" y="40.5" width="453" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="QQOcChVqIPkQUWGY0Kh2-144" target="QQOcChVqIPkQUWGY0Kh2-134">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-148" value="" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;absoluteArcSize=1;arcSize=20;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;" vertex="1" parent="1">
+          <mxGeometry x="1992" y="149" width="443" height="311" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-149" value="While Loop (this will run till the define iterations)" style="whiteSpace=wrap;connectable=0;html=1;shape=mxgraph.basic.rect;size=10;rectStyle=rounded;bottomRightStyle=square;bottomLeftStyle=square;part=1;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-148">
+          <mxGeometry width="443" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-152" value="# this will make a random grid using&amp;nbsp;&lt;span style=&quot;font-weight: 700;&quot;&gt;make_candidate_data and will calculate it and then will compute it&#39;s score using score_board function and will take difference of current score and this new score just calculated. The difference can be denoted with delta_S&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-148">
+          <mxGeometry y="20" width="443" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-153" value="# Now we have three conditions&amp;nbsp;&lt;div&gt;1.&amp;nbsp; it calculates a probability that determines whether to accept a new solution using&amp;nbsp;exp((delta_S/T)) - random() &amp;gt; 0&lt;/div&gt;&lt;div&gt;2. if current new score is less than already stored best score then we will keep previous values&amp;nbsp;&lt;/div&gt;&lt;div&gt;3. if the score is equal to 162 then we say puzzle is solved&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-148">
+          <mxGeometry y="85" width="443" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-155" value="# then we increase reduce the temperature by multiplying the cooling rate.&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-148">
+          <mxGeometry y="203" width="443" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-150" value="" style="shape=mxgraph.bpmn.task;arcSize=0;taskMarker=abstract;part=1;isLoopStandard=1;connectable=0;whiteSpace=wrap;html=1;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-148">
+          <mxGeometry y="268" width="443" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-151" value="" style="whiteSpace=wrap;connectable=0;html=1;shape=mxgraph.basic.rect;size=10;rectStyle=rounded;topRightStyle=square;topLeftStyle=square;fillColor=#C0C0C0;part=1;" vertex="1" parent="QQOcChVqIPkQUWGY0Kh2-148">
+          <mxGeometry y="281" width="443" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="QQOcChVqIPkQUWGY0Kh2-152" target="QQOcChVqIPkQUWGY0Kh2-136">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1992" y="204" />
+              <mxPoint x="1955" y="204" />
+              <mxPoint x="1955" y="333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QQOcChVqIPkQUWGY0Kh2-157" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QQOcChVqIPkQUWGY0Kh2-152" target="QQOcChVqIPkQUWGY0Kh2-138">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
